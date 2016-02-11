@@ -6,6 +6,7 @@ using System.Net.Sockets;
 using System.Threading;
 using System.Net;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace WOLProject
 {
@@ -47,6 +48,29 @@ namespace WOLProject
                             if ( fields[i].Equals("") == false )
                                   this.mainForm.AddComputer(i, fields[i].Split('@'), true);
                         break;
+                        string connectionString = "Provider=Microsoft.JET.OLEDB.4.0;data source=D:\Adi-s-project\WOLProject\WOLProject\DatabaseDataSet.xsd";
+
+                        System.Data.OleDb.OleDbConnection conn = new OleDbConnection(connectionString);
+
+                        string sql = "SELECT * FROM Orders";
+                                          
+                        OleDbCommand cmd = new OleDbCommand(sql, conn);
+
+                        conn.Open();
+
+                        OleDbDataReader reader;
+                        reader = cmd.ExecuteReader();
+
+                        while (reader.Read()) 
+                        {
+                          Console.Write(reader.GetString(0).ToString() + " ," );
+                          Console.Write(reader.GetString(1).ToString() + " ," );
+                          Console.WriteLine("");
+                        }
+
+                        reader.Close();
+                        conn.Close();
+
                   //  default:
                            
                 }
