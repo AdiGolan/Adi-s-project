@@ -25,3 +25,5 @@ C:\Users\User\Desktop\WOLProject\WOLProject\obj\x86\Debug\WOLProject.MainForm.re
 C:\Users\User\Desktop\WOLProject\WOLProject\obj\x86\Debug\WOLProject.Properties.Resources.resources
 C:\Users\User\Desktop\WOLProject\WOLProject\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\User\Desktop\WOLProject\WOLProject\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Adi-s-project\WOLProject\WOLProject\obj\x86\Debug\WOLProject.exe
+D:\Adi-s-project\WOLProject\WOLProject\obj\x86\Debug\WOLProject.pdb
