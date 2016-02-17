@@ -32,15 +32,3 @@ D:\Adi-s-project\WOLProject\WOLProject\bin\Debug\WOLProject.pdb
 D:\Adi-s-project\WOLProject\WOLProject\obj\x86\Debug\WOLProject.MainForm.resources
 D:\Adi-s-project\WOLProject\WOLProject\obj\x86\Debug\WOLProject.Properties.Resources.resources
 D:\Adi-s-project\WOLProject\WOLProject\obj\x86\Debug\WOLProject.csproj.GenerateResource.Cache
-C:\Adi\Adi-S-Project\WOLProject\WOLProject\obj\x86\Debug\WOLProject.exe
-C:\Adi\Adi-S-Project\WOLProject\WOLProject\obj\x86\Debug\WOLProject.pdb
-C:\Adi\Adi-S-Project\WOLProject\WOLProject\obj\x86\Debug\WOLProject.csprojResolveAssemblyReference.cache
-C:\Adi\Adi-S-Project\WOLProject\WOLProject\obj\x86\Debug\WOLProject.MainForm.resources
-C:\Adi\Adi-S-Project\WOLProject\WOLProject\obj\x86\Debug\WOLProject.Properties.Resources.resources
-C:\Adi\Adi-S-Project\WOLProject\WOLProject\obj\x86\Debug\WOLProject.csproj.GenerateResource.Cache
-C:\Adi\Adi-S-Project\WOLProject\WOLProject\bin\Debug\WOLProject.exe
-C:\Adi\Adi-S-Project\WOLProject\WOLProject\bin\Debug\WOLProject.pdb
-C:\Adi\Adi-S-Project\WOLProject\WOLProject\bin\Debug\Python\ArpScan.py
-C:\Adi\Adi-S-Project\WOLProject\WOLProject\bin\Debug\Python\PythonServer.py
-C:\Adi\Adi-S-Project\WOLProject\WOLProject\bin\Debug\Python\SessionWithClient.py
-C:\Adi\Adi-S-Project\WOLProject\WOLProject\bin\Debug\Python\SessionWithClient.pyc
