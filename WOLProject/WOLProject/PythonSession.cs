@@ -48,28 +48,28 @@ namespace WOLProject
                             if ( fields[i].Equals("") == false )
                                   this.mainForm.AddComputer(i, fields[i].Split('@'), true);
                         break;
-                        string connectionString = "Provider=Microsoft.JET.OLEDB.4.0;data source=D:\Adi-s-project\WOLProject\WOLProject\DatabaseDataSet.xsd";
+                        //string connectionString = "Provider=Microsoft.JET.OLEDB.4.0;data source=D:\Adi-s-project\WOLProject\WOLProject\DatabaseDataSet.xsd";
 
-                        System.Data.OleDb.OleDbConnection conn = new OleDbConnection(connectionString);
+                        //System.Data.OleDb.OleDbConnection conn = new OleDbConnection(connectionString);
 
-                        string sql = "SELECT * FROM Orders";
+                        //string sql = "SELECT * FROM Orders";
                                           
-                        OleDbCommand cmd = new OleDbCommand(sql, conn);
+                        //OleDbCommand cmd = new OleDbCommand(sql, conn);
 
-                        conn.Open();
+                        //conn.Open();
 
-                        OleDbDataReader reader;
-                        reader = cmd.ExecuteReader();
+                        //OleDbDataReader reader;
+                        //reader = cmd.ExecuteReader();
 
-                        while (reader.Read()) 
-                        {
-                          Console.Write(reader.GetString(0).ToString() + " ," );
-                          Console.Write(reader.GetString(1).ToString() + " ," );
-                          Console.WriteLine("");
-                        }
+                        //while (reader.Read()) 
+                        //{
+                        //  Console.Write(reader.GetString(0).ToString() + " ," );
+                        //  Console.Write(reader.GetString(1).ToString() + " ," );
+                        //  Console.WriteLine("");
+                        //}
 
-                        reader.Close();
-                        conn.Close();
+                        //reader.Close();
+                        //conn.Close();
 
                   //  default:
                            
