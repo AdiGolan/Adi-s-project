@@ -14,41 +14,39 @@ namespace WOLProject
     public partial class MainForm : Form
     {
         PythonSession pythonSession;
+        LocalDb localDb;
         int indexHost = -1;
 
         public MainForm()
         {
             InitializeComponent();
-             CreatePythonEngine();
+            CreatePythonEngine();
+            
             //this.WindowState = FormWindowState.Maximized;
         }
 
         private void CreatePythonEngine()
         {
+            localDb = new LocalDb("db-data.txt");
+            foreach (var computer in localDb.LocalDbData.Computers)
+            {
+                computer.IsOn = false;
+                computer.IpAddress = null;
+            }
+
             Process pythonProcess = new Process();
-            pythonProcess.StartInfo.FileName = @"C:\Python26\python.exe";
+            pythonProcess.StartInfo.FileName = System.Configuration.ConfigurationManager.AppSettings["PythonApp"];
             pythonProcess.StartInfo.Arguments = @"Python\PythonServer.py";
             pythonProcess.StartInfo.WorkingDirectory = Application.StartupPath;
             pythonProcess.Start();
 
-            pythonSession = new PythonSession(this);
+            pythonSession = new PythonSession(this, localDb);
         }
- 
+
         //private void NetScan()
         //{
         //    NetworkScan.GetIpNetTable(this, "");
         //}
-
-        public void AddComputer(int i, string [] conn, bool online)
-        {
-            this.Invoke((MethodInvoker)delegate
-            {
-                string[] fields = { i.ToString(), conn[0], conn[1], "on" };
-                ListViewItem item = new ListViewItem(fields, 0);
-                listViewHosts.Items.Add(item);
-            });
-
-        }
 
         private void listViewOnline_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -67,13 +65,25 @@ namespace WOLProject
             string mac = listViewHosts.Items[indexHost].SubItems[2].Text;
             WakeOnLan.WakeUp(mac);
         }
-
+        public void BuildComputerList()
+        {
+            this.Invoke((MethodInvoker)delegate
+            {
+                listViewHosts.Items.Clear();
+                foreach (var computer in localDb.LocalDbData.Computers)
+                {
+                    listViewHosts.Items.Add(new ListViewItem(new string[] {
+                    computer.Num.ToString(),
+                    computer.IpAddress,
+                    computer.MacAddress,
+                    computer.IsOn ? "On" : "Off" }, 1));
+                }
+            });
+        }
         private void MainForm_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'databaseDataSet.DB' table. You can move, or remove it, as needed.
-            this.dBTableAdapter.Fill(this.databaseDataSet.DB);
-
+            BuildComputerList();
         }
 
-     }
+    }
 }

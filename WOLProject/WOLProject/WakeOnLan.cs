@@ -63,7 +63,7 @@ namespace WOLProject
             {
 
                 // Send to: 255.255.255.0:40000 over UDP.
-                client.Connect(IPAddress.Broadcast, 40000);
+                client.Connect(IPAddress.Broadcast, 0);
 
                 // Two parts to a 'magic' packet:
                 //     First is 0xFFFFFFFFFFFF,

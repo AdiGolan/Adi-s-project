@@ -16,10 +16,11 @@ namespace WOLProject
         const int PORT = 12345;
         Thread listenerThread;
         private MainForm mainForm;
-     
+        private LocalDb _localDb;
 
-        public PythonSession(MainForm mainForm)
+        public PythonSession(MainForm mainForm, LocalDb localDb)
         {
+            this._localDb = localDb;
             this.mainForm = mainForm;
             listener = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             listenerThread = new Thread(new ThreadStart(Run));
@@ -29,7 +30,7 @@ namespace WOLProject
 
         public void Run()
         {
-            byte [] buffer = new byte[20000];
+            byte[] buffer = new byte[20000];
 
             listener.Bind(new IPEndPoint(IPAddress.Any, PORT));
             listener.Listen(1);
@@ -45,34 +46,15 @@ namespace WOLProject
                 {
                     case "ARP":
                         for (int i = 1; i < fields.Length; i++)
-                            if ( fields[i].Equals("") == false )
-                                  this.mainForm.AddComputer(i, fields[i].Split('@'), true);
+                            if (!String.IsNullOrEmpty(fields[i]))
+                            {
+                                var fieldData = fields[i].Split('@');
+                                var macAddress = fieldData[0];
+                                var ipAddress = fieldData[1];
+                                // Add or update computer in localDb
+                            }
+                        this.mainForm.BuildComputerList();
                         break;
-                        //string connectionString = "Provider=Microsoft.JET.OLEDB.4.0;data source=D:\Adi-s-project\WOLProject\WOLProject\DatabaseDataSet.xsd";
-
-                        //System.Data.OleDb.OleDbConnection conn = new OleDbConnection(connectionString);
-
-                        //string sql = "SELECT * FROM Orders";
-                                          
-                        //OleDbCommand cmd = new OleDbCommand(sql, conn);
-
-                        //conn.Open();
-
-                        //OleDbDataReader reader;
-                        //reader = cmd.ExecuteReader();
-
-                        //while (reader.Read()) 
-                        //{
-                        //  Console.Write(reader.GetString(0).ToString() + " ," );
-                        //  Console.Write(reader.GetString(1).ToString() + " ," );
-                        //  Console.WriteLine("");
-                        //}
-
-                        //reader.Close();
-                        //conn.Close();
-
-                  //  default:
-                           
                 }
             }
         }
