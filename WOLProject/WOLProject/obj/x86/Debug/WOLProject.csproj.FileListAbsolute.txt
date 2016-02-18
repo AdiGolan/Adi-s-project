@@ -45,3 +45,15 @@ C:\Adi\Adi-S-Project\WOLProject\WOLProject\obj\x86\Debug\WOLProject.exe
 C:\Adi\Adi-S-Project\WOLProject\WOLProject\obj\x86\Debug\WOLProject.pdb
 C:\Adi\Adi-S-Project\WOLProject\WOLProject\bin\Debug\WOLProject.exe.config
 C:\Adi\Adi-S-Project\WOLProject\WOLProject\obj\x86\Debug\WOLProject.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\Adi-s-project\WOLProject\WOLProject\bin\Debug\WOLProject.exe.config
+C:\Users\User\Desktop\Adi-s-project\WOLProject\WOLProject\bin\Debug\Python\ArpScan.py
+C:\Users\User\Desktop\Adi-s-project\WOLProject\WOLProject\bin\Debug\Python\PythonServer.py
+C:\Users\User\Desktop\Adi-s-project\WOLProject\WOLProject\bin\Debug\Python\SessionWithClient.py
+C:\Users\User\Desktop\Adi-s-project\WOLProject\WOLProject\bin\Debug\Python\SessionWithClient.pyc
+C:\Users\User\Desktop\Adi-s-project\WOLProject\WOLProject\bin\Debug\WOLProject.exe
+C:\Users\User\Desktop\Adi-s-project\WOLProject\WOLProject\bin\Debug\WOLProject.pdb
+C:\Users\User\Desktop\Adi-s-project\WOLProject\WOLProject\obj\x86\Debug\WOLProject.MainForm.resources
+C:\Users\User\Desktop\Adi-s-project\WOLProject\WOLProject\obj\x86\Debug\WOLProject.Properties.Resources.resources
+C:\Users\User\Desktop\Adi-s-project\WOLProject\WOLProject\obj\x86\Debug\WOLProject.csproj.GenerateResource.Cache
+C:\Users\User\Desktop\Adi-s-project\WOLProject\WOLProject\obj\x86\Debug\WOLProject.exe
+C:\Users\User\Desktop\Adi-s-project\WOLProject\WOLProject\obj\x86\Debug\WOLProject.pdb

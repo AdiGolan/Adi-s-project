@@ -31,16 +31,17 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.listViewHosts = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.shutdownToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.wakeOnLaneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.listViewHosts = new System.Windows.Forms.ListView();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -55,59 +56,6 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Hosts";
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "Online.ico");
-            this.imageList1.Images.SetKeyName(1, "Offline.ico");
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.shutdownToolStripMenuItem,
-            this.viewToolStripMenuItem,
-            this.wakeOnLaneToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(143, 70);
-            // 
-            // shutdownToolStripMenuItem
-            // 
-            this.shutdownToolStripMenuItem.Name = "shutdownToolStripMenuItem";
-            this.shutdownToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
-            this.shutdownToolStripMenuItem.Text = "Shutdown";
-            // 
-            // viewToolStripMenuItem
-            // 
-            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
-            this.viewToolStripMenuItem.Text = "View";
-            // 
-            // wakeOnLaneToolStripMenuItem
-            // 
-            this.wakeOnLaneToolStripMenuItem.Name = "wakeOnLaneToolStripMenuItem";
-            this.wakeOnLaneToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
-            this.wakeOnLaneToolStripMenuItem.Text = "WakeOnLAN";
-            this.wakeOnLaneToolStripMenuItem.Click += new System.EventHandler(this.wakeOnLaneToolStripMenuItem_Click);
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Num";
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "IP Address";
-            this.columnHeader2.Width = 136;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "MAC  Address";
-            this.columnHeader3.Width = 159;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Status";
             // 
             // listViewHosts
             // 
@@ -128,6 +76,64 @@
             this.listViewHosts.View = System.Windows.Forms.View.Details;
             this.listViewHosts.SelectedIndexChanged += new System.EventHandler(this.listViewOnline_SelectedIndexChanged);
             // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Num";
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "IP Address";
+            this.columnHeader2.Width = 136;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "MAC  Address";
+            this.columnHeader3.Width = 159;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Status";
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "Online.ico");
+            this.imageList1.Images.SetKeyName(1, "Offline.ico");
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.shutdownToolStripMenuItem,
+            this.viewToolStripMenuItem,
+            this.wakeOnLaneToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(144, 70);
+            // 
+            // shutdownToolStripMenuItem
+            // 
+            this.shutdownToolStripMenuItem.Name = "shutdownToolStripMenuItem";
+            this.shutdownToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.shutdownToolStripMenuItem.Text = "Shutdown";
+            // 
+            // viewToolStripMenuItem
+            // 
+            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.viewToolStripMenuItem.Text = "View";
+            // 
+            // wakeOnLaneToolStripMenuItem
+            // 
+            this.wakeOnLaneToolStripMenuItem.Name = "wakeOnLaneToolStripMenuItem";
+            this.wakeOnLaneToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.wakeOnLaneToolStripMenuItem.Text = "WakeOnLAN";
+            this.wakeOnLaneToolStripMenuItem.Click += new System.EventHandler(this.wakeOnLaneToolStripMenuItem_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 20000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -139,7 +145,6 @@
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "WakeMeOnLAN";
-            this.Load += new System.EventHandler(this.MainForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -159,6 +164,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

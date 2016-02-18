@@ -16,11 +16,11 @@ namespace WOLProject
         const int PORT = 12345;
         Thread listenerThread;
         private MainForm mainForm;
-        private LocalDb _localDb;
+        private Computers computers;
 
-        public PythonSession(MainForm mainForm, LocalDb localDb)
+        public PythonSession(MainForm mainForm, Computers computers)
         {
-            this._localDb = localDb;
+            this.computers = computers;
             this.mainForm = mainForm;
             listener = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             listenerThread = new Thread(new ThreadStart(Run));
@@ -49,9 +49,16 @@ namespace WOLProject
                             if (!String.IsNullOrEmpty(fields[i]))
                             {
                                 var fieldData = fields[i].Split('@');
-                                var macAddress = fieldData[0];
-                                var ipAddress = fieldData[1];
+                                var macAddress = fieldData[1];
+                                var ipAddress = fieldData[0];
                                 // Add or update computer in localDb
+                                computers.computersList.Add(new Computer()
+                                {
+                                    IpAddress = ipAddress,
+                                    IsOn = true,
+                                    MacAddress = macAddress,
+                                    Num = i,
+                                });
                             }
                         this.mainForm.BuildComputerList();
                         break;
