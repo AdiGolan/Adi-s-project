@@ -57,3 +57,16 @@ C:\Users\User\Desktop\Adi-s-project\WOLProject\WOLProject\obj\x86\Debug\WOLProje
 C:\Users\User\Desktop\Adi-s-project\WOLProject\WOLProject\obj\x86\Debug\WOLProject.csproj.GenerateResource.Cache
 C:\Users\User\Desktop\Adi-s-project\WOLProject\WOLProject\obj\x86\Debug\WOLProject.exe
 C:\Users\User\Desktop\Adi-s-project\WOLProject\WOLProject\obj\x86\Debug\WOLProject.pdb
+D:\קובי ועדי\Adi-s-project\WOLProject\WOLProject\bin\Debug\WOLProject.exe.config
+D:\קובי ועדי\Adi-s-project\WOLProject\WOLProject\obj\x86\Debug\WOLProject.exe
+D:\קובי ועדי\Adi-s-project\WOLProject\WOLProject\obj\x86\Debug\WOLProject.pdb
+D:\קובי ועדי\Adi-s-project\WOLProject\WOLProject\bin\Debug\Python\ArpScan.py
+D:\קובי ועדי\Adi-s-project\WOLProject\WOLProject\bin\Debug\Python\PythonServer.py
+D:\קובי ועדי\Adi-s-project\WOLProject\WOLProject\bin\Debug\Python\SessionWithClient.py
+D:\קובי ועדי\Adi-s-project\WOLProject\WOLProject\bin\Debug\Python\SessionWithClient.pyc
+D:\קובי ועדי\Adi-s-project\WOLProject\WOLProject\bin\Debug\WOLProject.exe
+D:\קובי ועדי\Adi-s-project\WOLProject\WOLProject\bin\Debug\WOLProject.pdb
+D:\קובי ועדי\Adi-s-project\WOLProject\WOLProject\obj\x86\Debug\WOLProject.MainForm.resources
+D:\קובי ועדי\Adi-s-project\WOLProject\WOLProject\obj\x86\Debug\WOLProject.Properties.Resources.resources
+D:\קובי ועדי\Adi-s-project\WOLProject\WOLProject\obj\x86\Debug\WOLProject.csproj.GenerateResource.Cache
+D:\קובי ועדי\Adi-s-project\WOLProject\WOLProject\obj\x86\Debug\WOLProject.csprojResolveAssemblyReference.cache

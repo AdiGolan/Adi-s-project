@@ -32,7 +32,7 @@ namespace WOLProject
             pythonProcess.StartInfo.FileName = @"C:\Python26\python.exe";  //System.Configuration.ConfigurationManager.AppSettings["PythonApp"];
             pythonProcess.StartInfo.Arguments = @"Python\NetworkScan.py";
             pythonProcess.StartInfo.WorkingDirectory = Application.StartupPath;
-            //  pythonProcess.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+            pythonProcess.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
             pythonProcess.Start();
             pythonSession = new PythonSession(this, computers);
             timer1.Enabled = true;
@@ -100,7 +100,7 @@ namespace WOLProject
                     else
                         compDB.IsOn = true;
                 }
-
+                int n = 0, f=0 , a=0;
                 foreach (Computer computer in computersListFromDB)
                 {
                     listViewHosts.Items.Add(new ListViewItem(new string[] {
@@ -108,7 +108,22 @@ namespace WOLProject
                         computer.IpAddress,
                         computer.MacAddress,
                         computer.IsOn ? "On" : "Off" }, computer.IsOn ? 0 : 1));
-                }                
+                    a++;
+                    if (computer.IsOn)
+                    {
+                        n++;
+                    }
+                    else
+                    {
+                        f++;
+                    }
+                }
+                string all = a.ToString();
+                string on = n.ToString();
+                string off = f.ToString();
+                allcomputers.Text = all;
+                oncomputers.Text = on;
+                offcomputers.Text = off;
             });
 
         }
@@ -125,9 +140,34 @@ namespace WOLProject
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+           CreatePythonEngine();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
             CreatePythonEngine();
         }
 
-    }
+        private void label1_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void computersoff_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+        
+        }
+
+    }
 }
+
